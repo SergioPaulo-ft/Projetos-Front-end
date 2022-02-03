@@ -1,0 +1,105 @@
+
+ body {
+    line-height: 1.5;
+    margin: auto;
+    border: 5px;
+ }
+
+a {
+	font-weight: bold;
+    text-decoration: none;
+}
+
+.links{
+    position: relative;
+	flex-flow: column wrap;
+	width:auto;
+	text-align: center;
+    padding: 30px;
+	margin: auto;
+}
+
+small {
+	color: #BBBBBB;
+}
+
+strong {
+	color: royalblue;
+}
+
+h1 {
+	font-family:Courier New, monospace;
+	font-weight: normal;
+    font-size: 75px;
+	text-align: center;
+    padding: 10px;
+	color: royalblue;
+	font-style: italic;
+	margin-top: 0;
+}
+
+h2 {
+	color: royalblue;
+        padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+h3 {
+	font-size: 18px;
+	color: #BBBBBB;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 42px;
+}
+
+h4 {
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+p {
+	font-family: Georgia, serif;
+	margin-top: 0;
+	margin-bottom: 27px;
+}
+
+ul {
+	list-style: square;
+}
+
+ul p {
+	color: #BBBBBB;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #999999;
+	margin: 30px 0;
+}
+
+img {
+	/*float: right;*/
+	margin-left: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #999999;
+	padding: 5px;
+}
+
+nav {
+	color: #999999;
+	text-align: center;
+}
+ to join this conversation on GitHub. Already have an account? Sign in to comment
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

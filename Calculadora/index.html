@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: linear-gradient(45deg, black, rgb(8, 110, 110));
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .calculadora {
+            position: absolute;
+            background-color: black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #665811;
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            margin: 1px;
+        }
+
+        button:hover {
+            background-color: #221d07;
+        }
+
+        #resultado {
+            width: 199px;
+            height: 30px;
+            background-color: white;
+            margin: 5px;
+            font-size: 25px;
+            font-weight: normal;
+            color: black;
+            text-align: right;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fundo">
+        <h1>Sergio Paulo</h1>
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <td><button onclick="clean()">C</button></td>
+                    <td><button onclick="back()"><</button></td>
+                    <td><button onclick="insert('/')">/</button></td>
+                    <td><button onclick="insert('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert('7')">7</button></td>
+                    <td><button onclick="insert('8')">8</button></td>
+                    <td><button onclick="insert('9')">9</button></td>
+                    <td><button onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert('4')">4</button></td>
+                    <td><button onclick="insert('5')">5</button></td>
+                    <td><button onclick="insert('6')">6</button></td>
+                    <td><button onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert('1')">1</button></td>
+                    <td><button onclick="insert('2')">2</button></td>
+                    <td><button onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button style="height: 106px;" onclick="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button style="width: 106px;" onclick="insert('0')">0</button></td>
+                    <td><button onclick="insert('.')">.</button></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <script>
+        function insert(num) {
+            var res = document.querySelector('#resultado')
+            res.innerHTML += num;
+        }
+
+        function clean() {
+            document.querySelector('#resultado').innerHTML = ""
+        }
+
+        function back(){
+            var res = document.querySelector('#resultado').innerHTML
+            document.querySelector('#resultado').innerHTML = res.substring(0, res.length -1)
+        }
+
+        function calcular(){
+            var res = document.querySelector('#resultado').innerHTML
+            if(res){
+                var res = document.querySelector('#resultado').innerHTML = eval(res)
+            }else{
+                var res = document.querySelector('#resultado').innerHTML = "error, adicione uma conta"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
