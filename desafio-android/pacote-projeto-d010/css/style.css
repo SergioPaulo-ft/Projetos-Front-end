@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --corverde00: #3BA80C;
+    --corverde01: #50fa07;
+    --corazul00: #1E28F5;
+    --corazul00opacity: #1e29f59e;
+    --coralaranja: #F57236;
+    --corazul01: #030CA8;
+    --corazul02: #2706CC;
+    --corazul02black: #12035b;
+    --corwhite: rgb(255, 255, 255);
+    --linear-header: linear-gradient(to bottom, var(--corverde01), var(--corverde00));
+    --linear-alternative: linear-gradient(to bottom, var(--corazul00), var(--corazul01), var(--corazul02black));
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-titulo: 'Bebas Neue', cursive;
+    --font-android: 'Android', cursive;
+}
+
+body {
+    background-color: var(--corazul00opacity);
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-image: var(--linear-alternative);
+    min-height: 150px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--font-titulo);
+    color: var(--corwhite);
+    padding-top: 30px;
+    margin-bottom: 15px;
+    font-size: 3em;
+    text-shadow: 3px 2px 10px rgba(0, 0, 0, 0.365);
+    font-weight: normal;
+}
+
+header p {
+    color: var(--corverde01);
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 500px;
+    padding: 0px 10px;
+    margin: auto;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.192);
+}
+
+nav {
+    background-color: var(--corazul02black);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.192);
+    padding: 10px;
+}
+
+nav a {
+    color: var(--corwhite);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    background-color: var(--corazul02);
+    border-radius: 5px;
+}
+
+main {
+    background-color: var(--corwhite);
+    margin: auto;
+    min-width: 300px;
+    max-width: 1000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.536);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+main strong {
+    color: var(--corazul02black);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+    color: var(--corazul02black);
+    background-color: var(--corverde00);
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--corwhite);
+}
+
+main img {
+    width: 100%;
+}
+
+main .pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+main h1 {
+    font-family: var(--font-titulo);
+    color: var(--corazul02black);
+    font-weight: normal;
+}
+
+main h2 {
+    font-family: var(--fonte-padrao);
+    font-weight: normal;
+    color: var(--corazul02black);
+    font-size: 1.2em;
+    background-image: linear-gradient(to right, var(--corverde01), transparent);
+    text-indent: 8px;
+}
+
+main h3 {
+    font-family: var(--font-android);
+    color: var(--corverde00);
+    font-weight: normal;
+}
+
+aside{
+    background-color: var(--corazul02black);
+    color: var(--corwhite);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside ul{
+    list-style-position: inside;
+    background: var(--corverde00);
+    margin: 6px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+aside a{
+    margin: 5px;
+    list-style-type: none;
+    text-decoration: none;
+    background: var(--corverde00);
+}
+
+span.border{
+    background-color: var(--corverde01);
+    max-width: 980px;
+    height: 1px;
+    margin: 30px 0px;
+    margin-left: 5px;
+    display: block;
+}
+
+.conteiner-video{
+    margin: 0px -20px 30px;
+    padding: 20px;
+    padding-bottom: 59%;
+    
+    position: relative;
+}
+
+.conteiner-video iframe{
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 94%;
+    height: 90%;
+}
+
+footer {
+    background-color: var(--coralaranja);
+    color: var(--corwhite);
+    padding: 5px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+footer a{
+    color: var(--corwhite);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+footer a:hover{
+    color: var(--corazul00);
+}
