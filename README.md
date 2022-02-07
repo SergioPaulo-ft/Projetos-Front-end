@@ -1,6 +1,6 @@
 # Olá seja bem vindo(a) ao meu repositório.
 
- <p>Sou estudante front-end e estou aprendendo html css e javascript começei a publicar meus projetos aqui recentemente. Se puder dar estrelinha e compartinhar agradeço muito.</p>
+ <p>Sou estudante front-end e estou aprendendo html, css e javascript comecei a publicar meus projetos aqui recentemente. Se puder dar estrelinha e compartilhar agradeço muito.</p>
 
 <h2>Contatos:</h2>
  
