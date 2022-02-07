@@ -4,10 +4,9 @@
 
 <h2>Contatos:</h2>
  
-
-<div><a href="https://wa.me/985163603"><img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/soon-873316_960_720.png" style="width:50px"></a>
+<div style="display:flex"><a href="https://wa.me/985163603"><img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/soon-873316_960_720.png" style="width:40px"></a>
+<a href="https://www.linkedin.com/in/sergio-paulo-b01887199/" title="Linkedin.png"class="logolinkedin"><img class="icone" src="https://img2.gratispng.com/20180422/ebw/kisspng-computer-icons-linkedin-logo-atrio-systems-inc-linked-in-5adc2d210277b0.8858613515243789130101.jpg"></a>
 </div>
-
 
 
 
