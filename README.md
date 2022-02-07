@@ -1,4 +1,4 @@
-# Olá seja bem vindo(a) ao meu repositório.
+# Olá, seja bem vindo(a) ao meu repositório.
 
  <p>Sou estudante e estou aprendendo html, css e javascript. Comecei a publicar meus projetos aqui recentemente, então se puder dar estrelinha e compartilhar agradeço muito.</p>
 
