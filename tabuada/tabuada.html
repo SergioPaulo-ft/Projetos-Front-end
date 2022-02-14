@@ -24,6 +24,7 @@
             for(i = 0; i<=10; i++){
                 res.innerHTML += `${numero} x ${i} = ${numero*i} <br>`
             }
+            res.innerHTML += `<br>`
         })
         enter.addEventListener("keypress", function(e){
             let numero = parseInt(document.querySelector("#numero").value)
@@ -31,6 +32,7 @@
                 for(i = 0; i<=10; i++){
                 res.innerHTML += `${numero} x ${i} = ${numero*i} <br>`
             }
+            res.innerHTML += `<br>`
             }
         })
         clear.addEventListener("click", function(e){
