@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="numero">
+    <button id="button">Resultado</button>
+    <div id="res"></div>
+    <script>
+        let enter = document.querySelector("#numero") //tecla
+        let bt = document.querySelector("#button") //click
+        let res = document.querySelector('#res') // resposta
+        
+        bt.addEventListener("click", function (event){ 
+            let numero = parseInt(document.querySelector("#numero").value)
+            res.innerHTML = " "
+            for(i = 0; i<=10; i++){
+                res.innerHTML += `${numero} x ${i} = ${numero*i} <br>`
+            }
+        })
+        enter.addEventListener("keypress", function(e){
+            let numero = parseInt(document.querySelector("#numero").value)
+            res.innerHTML = " "
+            if(e.key === "Enter"){
+                for(i = 0; i<=10; i++){
+                res.innerHTML += `${numero} x ${i} = ${numero*i} <br>`
+            }
+            }
+        })
+    </script>
+</body>
+
+</html>
