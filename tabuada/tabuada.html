@@ -14,30 +14,41 @@
     <button id="limpar">Limpar</button>
     <div id="res"></div>
     <script>
-        let enter = document.querySelector("#numero") //tecla
+        let enter = document.querySelector("#numero") //tecla "Enter"
         let addTabuada= document.querySelector("#adicionar") //click
-        let clear = document.querySelector('#limpar')
+        let clear = document.querySelector('#limpar') //botão limpar tabuada
         let res = document.querySelector('#res') // resposta
+        let tabuadaClick = ""
+        let tabuadaEnter = ""
         
+        //adicionando tabuada com click
         addTabuada.addEventListener("click", function (event){ 
             let numero = parseInt(document.querySelector("#numero").value)
+            console.log(typeof(numero))
             for(i = 0; i<=10; i++){
-                res.innerHTML += `${numero} x ${i} = ${numero*i} <br>`
+                tabuadaClick += `${numero} x ${i} = ${numero*i} <br>` 
             }
-            res.innerHTML += `<br>`
+            res.innerHTML =  `<br>` + tabuadaClick + `<br>`
         })
+        //adicionando tabuada com tecla "Enter"
         enter.addEventListener("keypress", function(e){
             let numero = parseInt(document.querySelector("#numero").value)
             if(e.key === "Enter"){
                 for(i = 0; i<=10; i++){
-                res.innerHTML += `${numero} x ${i} = ${numero*i} <br>`
+                tabuadaEnter += `${numero} x ${i} = ${numero*i} <br>`
             }
-            res.innerHTML += `<br>`
+            res.innerHTML = `<br>` + tabuadaEnter + `<br>`
             }
         })
-        clear.addEventListener("click", function(e){
-            res.innerHTML = " "
-        })
+        //limpando tabuada
+        clear.addEventListener("click", limpar = (clear) => {
+            res.innerHTML = ""
+            tabuadaEnter = ""
+            tabuadaClick = ""
+            }) 
+        
+
+        
     </script>
 </body>
 
