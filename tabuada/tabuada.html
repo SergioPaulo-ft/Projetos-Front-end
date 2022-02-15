@@ -28,7 +28,7 @@
             for(i = 0; i<=10; i++){
                 tabuadaClick += `${numero} x ${i} = ${numero*i} <br>` 
             }
-            res.innerHTML =  `<br>` + tabuadaClick + `<br>`
+            res.innerHTML = tabuadaClick 
         })
         //adicionando tabuada com tecla "Enter"
         enter.addEventListener("keypress", function(e){
@@ -37,7 +37,7 @@
                 for(i = 0; i<=10; i++){
                 tabuadaEnter += `${numero} x ${i} = ${numero*i} <br>`
             }
-            res.innerHTML = `<br>` + tabuadaEnter + `<br>`
+            res.innerHTML =  tabuadaEnter 
             }
         })
         //limpando tabuada
