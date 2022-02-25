@@ -10,6 +10,9 @@
 
     body{
     background-image: radial-gradient(red,black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 89vh;
     font-size: 1em;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
@@ -73,7 +76,7 @@
         <div class="flex">
             <h2>Tabuada</h2>
             <div class="interface">
-                <input type="number" id="numero">
+                <input type="text" id="numero">
                 <button id="adicionar">Tabuada</button>
                 <button id="limpar">Limpar</button>
             </div>
@@ -90,13 +93,13 @@
         let tabuadaEnter = ""
         
         //adicionando tabuada com click
-        addTabuada.addEventListener("click", function (event){ 
+        addTabuada.addEventListener("click", function click(event){ 
             let numero = parseInt(document.querySelector("#numero").value)
             console.log(typeof(numero))
             for(i = 0; i<=10; i++){
-                tabuadaClick += `${numero} x ${i} = ${numero*i} <br>` 
-            }
-            res.innerHTML = tabuadaClick 
+                    tabuadaClick += `${Number(numero)} x ${i} = ${numero*i} <br>` 
+                }
+                res.innerHTML = tabuadaClick 
         })
         //adicionando tabuada com tecla "Enter"
         enter.addEventListener("keypress", function(e){
