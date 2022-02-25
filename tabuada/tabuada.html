@@ -6,13 +6,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+    body{
+    background-image: radial-gradient(red,black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 89vh;
+    font-size: 1em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    h2{
+    font-size: 2.3rem;
+    }
+
+    input{
+        padding: 8px;
+        width: 50px;
+        border: 1px solid black;
+    }
+    
+    button{
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+        color: black;
+        background-color: lightgrey;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.111);
+    }
+
+    button:hover{
+        color: white;
+        background-color: rgb(141, 134, 134);
+    }
+
+
+
+    .container{
+    background: white;
+    width: 500px;
+    height: 600px;
+    overflow-x: auto;
+    margin: 100px auto;
+    }
+
+    .flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    #res{
+        background-color: rgb(240, 241, 255);
+        width: auto;
+        margin-top: 8px;
+    }
+
+    </style>
 </head>
 
 <body>
-    <input type="number" id="numero">
-    <button id="adicionar">Tabuada</button>
-    <button id="limpar">Limpar</button>
-    <div id="res"></div>
+    <main class="container">
+        <div class="flex">
+            <h2>Tabuada</h2>
+            <div class="interface">
+                <input type="text" id="numero">
+                <button id="adicionar">Tabuada</button>
+                <button id="limpar">Limpar</button>
+            </div>
+            <div id="res"></div>
+        </div>
+            
+    </main>
     <script>
         let enter = document.querySelector("#numero") //tecla "Enter"
         let addTabuada= document.querySelector("#adicionar") //click
@@ -22,13 +93,13 @@
         let tabuadaEnter = ""
         
         //adicionando tabuada com click
-        addTabuada.addEventListener("click", function (event){ 
+        addTabuada.addEventListener("click", function click(event){ 
             let numero = parseInt(document.querySelector("#numero").value)
             console.log(typeof(numero))
             for(i = 0; i<=10; i++){
-                tabuadaClick += `${numero} x ${i} = ${numero*i} <br>` 
-            }
-            res.innerHTML = tabuadaClick 
+                    tabuadaClick += `${Number(numero)} x ${i} = ${numero*i} <br>` 
+                }
+                res.innerHTML = tabuadaClick 
         })
         //adicionando tabuada com tecla "Enter"
         enter.addEventListener("keypress", function(e){
